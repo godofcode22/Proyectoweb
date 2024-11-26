@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 def hola(request):
-    return HttpResponse("Le rasco el chile</h1>")
+    return HttpResponse("Hello world!")
 
 # Create your views here.
