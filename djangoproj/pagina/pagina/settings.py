@@ -121,3 +121,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/5.1/howto/static-files/
+
+STATIC_URL = '/static/'
+
+# Agrega esta configuración para que Django encuentre tus archivos estáticos
+STATICFILES_DIRS = [
+    BASE_DIR / "pagina" / "static",  # Apunta a la carpeta 'static' dentro de la aplicación 'pagina'
+]
+
