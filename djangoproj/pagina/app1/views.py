@@ -7,14 +7,27 @@ def hola(request):
 
 def about(request):
     imagen_url = static('sour.jpeg')
-    
-    print(imagen_url)
-    html=(f"""
-        <center>
-        <h1><font color='c209d8'>I KNOW YOU GET DEJA VU!</font></h1>
-        <img src="{imagen_url}" alt="Ejemplo de Imagen" style="width: 300px; height:300px">
-        </center>
-    """)
+    css_url = static('style.css')  # URL del archivo CSS
+    favicon_url=static('logo.png')
+
+    html = f"""
+     <!DOCTYPE html>
+     <html lang="es">
+     <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sour</title>
+     <link rel="icon" href="{favicon_url}" type="image/x-icon">
+     <!-- Aquí conectamos el CSS -->
+     <link rel="stylesheet" href="{css_url}">
+     </head>
+     <body>
+     <center>
+        <h1>I KNOW YOU GET DEJA VU!</h1>
+        <img src="{imagen_url}" alt="Ejemplo de Imagen">
+     </center>
+     </body>
+     </html>"""
     return HttpResponse(html)
 # Create your views here.
 
